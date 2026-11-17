@@ -20,54 +20,6 @@ This repository contains the practical assignment for the **TuteDude DevOps** mo
 
 ---
 
-## 📂 Complete Repository Structure
-
-```text
-terraform-aws-flask-express/
-├── apps/
-│   ├── express/
-│   │   ├── Dockerfile
-│   │   ├── package.json
-│   │   └── server.js
-│   └── flask/
-│       ├── Dockerfile
-│       ├── app.py
-│       └── requirements.txt
-├── part1-single-ec2/
-│   ├── main.tf
-│   ├── outputs.tf
-│   ├── terraform.tfvars.example
-│   ├── user_data.sh
-│   └── variables.tf
-├── part2-two-ec2/
-│   ├── backend_user_data.sh
-│   ├── frontend_user_data.sh
-│   ├── main.tf
-│   ├── outputs.tf
-│   ├── terraform.tfvars.example
-│   └── variables.tf
-├── part3-ecs-ecr-alb/
-│   ├── backend.hcl.example
-│   ├── backend.tf
-│   ├── main.tf
-│   ├── outputs.tf
-│   ├── terraform.tfvars.example
-│   └── variables.tf
-├── scripts/
-│   ├── part3-build-push.sh
-│   └── verify.sh
-├── state-bootstrap/
-│   ├── main.tf
-│   ├── outputs.tf
-│   ├── terraform.tfvars.example
-│   └── variables.tf
-├── .gitignore
-├── Assignment_8_Terraform.docx
-├── GITHUB_REPOSITORY.txt
-└── README.md
-
----
-
 ## ⚙️ Prerequisites & One-Time Setup
 
 * **Prerequisites:** AWS account with permissions for EC2, VPC, IAM, S3, ECR, ECS, ELB, and CloudWatch; AWS CLI v2 configured; Terraform `>= 1.5`, Docker, and Git installed.
@@ -141,3 +93,49 @@ To avoid ongoing AWS charges, run `terraform destroy` sequentially within `part3
 ## 🔒 Security Notes
 * Never commit `.tfstate`, `.terraform/`, AWS credentials, or populated `.tfvars` / `backend.hcl` files.
 * Restrict SSH access in Parts 1 and 2 using specific `ssh_cidr` blocks (`YOUR_PUBLIC_IP/32`).
+
+## 📂 Complete Repository Structure
+
+```text
+terraform-aws-flask-express/
+├── apps/
+│   ├── express/
+│   │   ├── Dockerfile
+│   │   ├── package.json
+│   │   └── server.js
+│   └── flask/
+│       ├── Dockerfile
+│       ├── app.py
+│       └── requirements.txt
+├── part1-single-ec2/
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── terraform.tfvars.example
+│   ├── user_data.sh
+│   └── variables.tf
+├── part2-two-ec2/
+│   ├── backend_user_data.sh
+│   ├── frontend_user_data.sh
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── terraform.tfvars.example
+│   └── variables.tf
+├── part3-ecs-ecr-alb/
+│   ├── backend.hcl.example
+│   ├── backend.tf
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── terraform.tfvars.example
+│   └── variables.tf
+├── scripts/
+│   ├── part3-build-push.sh
+│   └── verify.sh
+├── state-bootstrap/
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── terraform.tfvars.example
+│   └── variables.tf
+├── .gitignore
+├── Assignment_8_Terraform.docx
+├── GITHUB_REPOSITORY.txt
+└── README.md
