@@ -1,0 +1,3 @@
+aws_region = "ap-south-1"
+project = "terraform-demo-p3"
+image_tag = "v1"
