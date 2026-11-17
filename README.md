@@ -22,6 +22,7 @@ This repository contains the practical assignment for the **TuteDude DevOps** mo
 
 ## 📂 Complete Repository Structure
 
+```text
 terraform-aws-flask-express/
 ├── apps/
 │   ├── express/
